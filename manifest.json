@@ -1,0 +1,31 @@
+{
+    "name": "ReadabilityCopy",
+    "description": "使用Readability复制网页内容",
+    "version": "0.5",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "icons": {
+        "16": "copyIcon.png",
+        "48": "copyIcon.png",
+        "128": "copyIcon.png"
+      },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "myscript.js",
+                "Readability.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "contextMenus"
+    ]
+}
