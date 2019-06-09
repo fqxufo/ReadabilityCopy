@@ -57,8 +57,4 @@ var copyText = function () {
 }
 
 
-chrome.extension.onMessage.addListener(function (message, sender, callback) {
-    if (message.functiontoInvoke == "copyReadability") {
-        copyText();
-    }
-});
+copyText();

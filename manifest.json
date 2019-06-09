@@ -14,18 +14,9 @@
         "48": "copyIcon.png",
         "128": "copyIcon.png"
       },
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                "myscript.js",
-                "Readability.js"
-            ]
-        }
-    ],
+    
     "permissions": [
-        "contextMenus"
+        "contextMenus",
+        "activeTab"
     ]
 }

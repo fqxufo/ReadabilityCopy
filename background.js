@@ -3,10 +3,11 @@ function handleClick(info, tab) {
         "active": true,
         "currentWindow": true
     }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {
-            "functiontoInvoke": "copyReadability"
+        chrome.tabs.executeScript(null, { file: "Readability.js" }, function () {
+            chrome.tabs.executeScript(null, { file: "myscript.js" });
         });
-    });
+    }
+    )
 }
 
 
